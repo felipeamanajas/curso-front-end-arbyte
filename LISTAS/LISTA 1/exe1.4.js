@@ -4,7 +4,7 @@ maçãs compradas, calcule e escreva o valor total da compra */
 
 var readlineSync = require('readline-sync');
 
-var quantidade_de_maca = readlineSync.questionInt("Informa a quantidade de maças que voce quer comprar ")
+var quantidade_de_maca = readlineSync.questionInt("Informa a quantidade de macas que voce quer comprar ")
 
 if(quantidade_de_maca < 12) {
 preco = 0.30 * quantidade_de_maca
@@ -13,4 +13,4 @@ preco = 0.30 * quantidade_de_maca
 preco = 0.25 * quantidade_de_maca
 }
 
-console.log('O valor da compra é:' + preco)
+console.log('O valor da compra e:' + preco)

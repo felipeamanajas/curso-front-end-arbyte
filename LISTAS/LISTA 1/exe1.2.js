@@ -2,10 +2,10 @@
 
 var readlineSync = require('readline-sync');
 
-var numero = readlineSync.questionInt("Informe um número, e descubra se ele é par ou impar")
+var numero = readlineSync.questionInt("Informe um numero, e descubra se ele e par ou impar")
 
 if(numero % 2 == 0){
-    console.log("O numero é positivo")
+    console.log("O numero e PAR")
 }else {
-    console.log("O Numero é negativo")
+    console.log("O Numero e IMPAR")
 }

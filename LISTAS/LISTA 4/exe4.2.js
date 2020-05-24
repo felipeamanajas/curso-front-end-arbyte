@@ -9,27 +9,21 @@ let n1 = 1;
 let n2 = 50;
 
 while (n1 <= n2) {
-
     let ehPrimo = true;
     let divisor = 2;
 
     while (divisor < n1) {
         if (n1 % divisor == 0) {
             // não é primo
-            ehPrimo == false;
-        } 
+            ehPrimo = false;
+        }
         divisor++
     }
-    
-    if (n1 % 2 == 0){
-        if (ehPrimo)
-        console.log(n1 + ' é primo')
-    }
-    if (n1 % 2 == 0) {
-        console.log(n1 + ' é par');
 
-    } else {
-        console.log(n1 + ' é impar');
-    }
+    if (n1 % 2 == 0)
+    if (ehPrimo) console.log(n1 + ' é primo')
+    if (n1 % 2 == 0) console.log(n1 + ' é par');
+    else console.log(n1 + ' é impar');
+
     n1++
 }

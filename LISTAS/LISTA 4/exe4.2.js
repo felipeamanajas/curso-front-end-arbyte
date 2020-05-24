@@ -21,7 +21,8 @@ while (n1 <= n2) {
         divisor++
     }
     
-    if (ehPrimo){
+    if (n1 % 2 == 0){
+        if (ehPrimo)
         console.log(n1 + ' é primo')
     }
     if (n1 % 2 == 0) {
@@ -32,5 +33,3 @@ while (n1 <= n2) {
     }
     n1++
 }
-
-// revisar exercicio

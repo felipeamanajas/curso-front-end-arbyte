@@ -28,19 +28,3 @@ for (; true;) {
     }
 }
 
-
-
-
-
-
-
-
-
-// var fatorial =1;
-// var n = 5
-// i = 1 
-
-// for(i=1;i<=n;i++){
-//   fatorial=fatorial*i;
-// }
-// console.log(fatorial);

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/felip/aula.db" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="940"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="Carro"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Carro" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk=""><sort/><column_widths/><filter_values/><display_formats/><hidden_columns/><plot_y_axes/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1 e 2">--1. Crie um banco de dados chamado aula.db
+--2. Crie uma tabela de carros com os campos
+CREATE TABLE Carro(
+nome VARCHAR,
+cor VARCHAR,
+ano INTEGER,
+valor INTEGER
+);</sql><sql name="SQL 3">-- 3. Insira pelo menos 10 carros na tabela de carros utilizando o comando Insert
+--Coloque 5 carros com ano antes de 2000 e 5 carros com ano depois de 2000
+
+INSERT INTO Carro (nome, cor, ano, valor) 
+VALUES ('uno', 'vermelho', 2020, 50000),
+('palio','branco',2019, 46000),
+('uno', 'amarelo', 2020, 5000),
+('clio', 'vermelho',2012,1500),
+('fusca', 'azul', 1980, 8000),
+('uno', 'verde', 2020, 50000),
+('palio','roxo',2019, 46000),
+('uno', 'prata', 2020, 5000),
+('clio', 'amarelo',2012,1500),
+('fusca', 'preto', 1980, 8000)
+
+
+
+</sql><sql name="SQL 4">-- 4. Faça uma consulta que seleciona os carros após os anos 2000 utilizando uma cláusula where
+SELECT nome FROM carro WHERE ano &gt;= 2000;</sql><sql name="SQL 5">-- 5. Faça uma consulta que faça distinção (valores não repetidos) de todas as cores que
+-- existem dos carros, utilizando o comando distinct
+
+SELECT DISTINCT cor FROM Carro;
+
+</sql><sql name="SQL 6">-- Faça uma consulta que conte quantos carros foram lançados antes dos anos 2000
+-- utilize o comando count
+
+SELECT nome FROM carro WHERE ano &lt; 2000;
+</sql><sql name="SQL 7">-- 7. Faça uma consulta que calcule a média de preços dos carros lançados após os anos
+-- 2000 utilize a função AVG
+
+SELECT AVG (valor) FROM carro WHERE ano &gt; 2000;</sql><sql name="SQL 8">-- 8. Faça uma consulta que calcule a soma de todos os valores dos carros no banco.
+-- Utilize a função sum
+
+SELECT SUM (valor) FROM carro;</sql><sql name="SQL 9">-- 9. Faça uma consulta que procure todos os carros que o nome começam com a letra ‘F’,
+-- utilize o comando like na consulta
+
+SELECT * FROM carro WHERE nome LIKE 'F%';</sql><sql name="SQL 10">-- 10. Faça uma consulta que procure todos os carros que possuem cores que terminam com
+-- a letra ‘A’ utilize o comando like na consulta
+
+SELECT * FROM carro WHERE nome LIKE '%a';</sql><sql name="SQL 11">-- 11. Faça uma consulta que procure todos os carros lançados entre 1990 - 1995
+-- Utilize o comando Between Referência ​https://www.w3schools.com/sql/sql_between.asp
+
+SELECT * FROM carro WHERE ano BETWEEN 1990 AND 1995;
+
+</sql><sql name="SQL 12">-- 12. Faça uma consulta que procure o carro mais caro da tabela utilizando a função MAX
+
+SELECT MAX(valor) FROM Carro;
+</sql><sql name="SQL 13">-- 13. Faça uma consulta que procura o carro mais barato da tabela utilizando a função MIN
+-- Referência : ​https://www.w3schools.com/sql/sql_min_max.asp
+
+SELECT MIN(valor) FROM Carro;
+</sql><sql name="SQL 14">-- 14. Faça uma consulta que procure o carro mais velho da tabela utilizando a função MIN
+
+SELECT MIN(ano) FROM Carro;
+</sql><sql name="SQL 15">-- 15. Faça uma consulta que procure o carro mais novo da tabela utilizando a função MAX
+
+SELECT MAX(valor) FROM Carro;
+
+</sql><sql name="SQL 17">-- 16. Faça uma consulta que ordene os carros pelo nome, utilize o comando order by
+
+SELECT * FROM Carro
+ORDER BY nome;
+</sql><current_tab id="14"/></tab_sql></sqlb_project>
